@@ -1,0 +1,333 @@
+﻿@charset "utf-8";
+
+/*******   初期化  ********/
+body, div, pre, p, blockquote,
+form, fieldset, input, textarea, select, option,
+dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,
+table, th, td, embed, object {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+img {
+  border: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.0em;
+}
+ul {
+  list-style: none;
+}
+
+/***********************************/
+/******** CSSテクニック ************/
+/***********************************/
+  /***　マウスオーバーで透過　***/
+  a:hover img {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -ms-filter: "alpha( opacity=50 )";
+  }
+  /***  ボックス作成  ***/
+    /*  1BOX 透明  */
+    div.headimg, div.headimg-white {
+      background-image: url(../../images/box/transparentTop.png);
+      background-repeat: no-repeat;
+      background-size: 980px;
+      padding: 0;
+      width: 980px;
+      height: 40px;
+    }
+
+    div.text, div .text-white {
+      background-image: url(../../images/box/transparentText.png);
+      background-repeat: repeat-y;
+      padding: 0 22px 0 22px;
+    }
+
+    div.footimg, div .footimg-white {
+      background-image: url(../../images/box/transparentFoot.png);
+      background-repeat: no-repeat;
+      background-size: 980px;
+      width: 980px;
+      height: 42px;
+    }
+
+    /*  1box 白色  */
+    div.headimg-white {
+      background-image: url(../../images/box/whiteTop.png);
+    }
+
+    div.text-white {
+      background-image: url(../../images/box/whiteText.png);
+    }
+
+    div.footimg-white {
+      background-image: url(../../images/box/whiteFoot.png);
+    }
+    
+    
+    /*  fourBox  */
+    img.fourBoxImg {
+      height:155px;
+      width:237px;
+    }
+
+
+/********省略して定義したclass  *********/
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.fc {
+  clear: both;
+  float:none;
+}
+
+.tc {
+  text-align: center;
+}
+
+
+/*************************************/
+/********  ヘッドのメニュー  *********/
+/*************************************/
+
+  /****  menu_wrapper  *****/
+  #menu_wrapper {
+    margin:0;
+    padding: 0 16px 0px 0px;
+  }
+
+    #menu_wrapper div {
+      float: left;
+      height: 44px;
+      width: 12px;
+    }
+
+    #menu_wrapper ul {
+    margin-left: 11px;
+    line-height:0;
+    }
+
+      /* Black Menu */
+      #menu_wrapper.black ul {
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #000;
+        background: #333;
+      }
+
+      #menu_wrapper.black a {
+        color: #CCC;
+      }
+
+      #menu_wrapper.black li a:hover, #menu_wrapper.black li.active a {
+        color: #999;
+        background: #555;
+        border-bottom: 2px solid #444;
+      }
+
+      #menu_wrapper.black {
+        background: url(../../images/black.png) no-repeat right;
+      }
+
+      #menu_wrapper.black div {
+        background: url(../../images/black.png) no-repeat left;
+      }
+
+  /****  menu   *****/
+  #menu {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin: 0 0 0 0;
+    padding: 0px 0px;
+    list-style-type: none;
+    background-color: #eee;
+    font-size: 13px;
+    height: 42px;
+  }
+
+    #menu li {
+      float: left;
+      margin: 0;
+    }
+
+      #menu li a {
+        text-decoration: none;
+        display: block;
+        padding: 0 20px;
+        line-height: 40px;
+        color: #666;
+      }
+
+        #menu li a:hover, #menu li.active a {
+          background-color: #f5f5f5;
+          border-bottom: 25px solid #DDD;
+          color: #999;
+        }
+
+
+
+
+/*************************************/
+/************   フッター *************/
+/*************************************/
+
+#footer {
+  margin: 20px 0 0 0;
+  font-size: 80%;
+  color: #797979;
+}
+
+hr {
+  color: white;
+}
+#footer a {
+  text-decoration: none;
+}
+
+
+
+
+
+/***********************************/
+/************   CSS     ************/
+/***********************************/
+body, html {
+  background-color: #F2F2F2;
+  width: 100%;
+}
+
+#topSeo {
+  font-size: 9px;
+  text-align:center;
+  margin: 0px auto;
+  width: 980px;
+}
+
+#container {
+  margin:0px auto 0px;
+  width: 980px;
+}
+
+
+#main {
+  margin: 0 0 0 0;
+  height: auto;
+  width: auto;
+}
+
+.topImage {
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+
+
+.centerDiv {
+  position: absolute;
+  left: 50%;
+  height: 100%;
+  width: 150px;
+  margin-left: -75px;
+}
+
+
+.opacity {
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    -ms-filter: "alpha( opacity=70 )";
+}
+
+
+
+
+
+
+/*****************************************/
+/******* 各ページに対応したCSS  **********/
+/*****************************************/
+
+  /******   about.html ***********/
+  p.apple {
+    font-family: "Lucida Grande", ?, "Lucida Sans Unicode", ?, "Hiragino Kaku Gothic Pro", ?, "ヒラギノ角ゴ Pro W3", ?"メイリオ", ?Meiryo, ?, "ＭＳ Ｐゴシック", ?Helvetica, ?Arial, ?Verdana, ?sans-serif;
+  }
+
+
+
+
+  /********  member.html  ********/
+  .margin10px {
+    margin: 0 0 0 10px;
+  }
+
+  .margin190px {
+    margin: 0 0 0 190px;
+  }
+
+
+    /****ヘッダー上部の楽器メニュー****/
+    .inst {
+      height: 100px;
+      width: 100px;
+    }
+
+    div.instArea {
+      clear: both;
+      position: relative;
+      width: 960px;
+      padding: 0px;
+      height: 100px;
+
+    }
+      div.instArea ul:after {
+        display: block;
+        clear: both;
+        height: 0;
+        line-height: 0;
+        visibility: hidden;
+        content: ".";
+        font-size: 0.1em;
+      }
+      div.instArea ul {
+        display: inline-block;
+        position: relative;
+        left: 50%;
+        float:left;
+      }
+      div.instArea ul li {
+        float: left;
+        position: relative;
+        right: 50%;
+        width: 130px;
+        margin: 5px;
+        list-style-type: none;
+        font-size: 82%;
+        text-align: center;
+        color: #797979;
+      }
+      div.instArea a {
+      text-decoration: none;
+    }
+
+    /*メンバーのボックス*/
+    .box {
+      width:200px;
+      margin: 5px 10px 5px 10px;
+      padding: 10px 10px 5px 10px;
+      background-color: white;
+      float: left;
+      border: 1px solid #797979;
+    }
+
+
+
+
+
+
+
